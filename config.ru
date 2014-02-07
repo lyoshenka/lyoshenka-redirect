@@ -6,8 +6,7 @@ use Rack::Rewrite do
 #    rack_env['SERVER_NAME'] == 'lyoshenka.com'
 #  }
 
-  r301 %r{.*}, 'http://blog.grin.io',  :host => 'lyoshenka.com'
-  r301 %r{.*}, 'http://fit.grin.io',  :host => 'grin.io'
+  r301 %r{.*}, 'http://grin.io',  :host => 'lyoshenka.com'
   r301 %r{(.*)}, 'http://fit.grin.io$1', :host => 'grinfit.alexgr.in'
 end
 
